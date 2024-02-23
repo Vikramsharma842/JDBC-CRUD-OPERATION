@@ -1,0 +1,94 @@
+
+Q1. What is JDBC ?
+Ans --> Jdbc is API or the Process of connecting the application and Database
+            
+            JDBC
+Application --------------> MySQL(Database) 
+
+JDBC API(Java Application,JDBC driver)  --------> Database.
+                      \
+## JDBC APi contains Java Application and JDBC Driver.
+
+
+# Steps to connecting the application and Database
+
+1. Load driver class
+2. Obtain a connection
+3. Obtain a statement
+4. Execute the query
+5. Close the connection
+
+################################
+Basic query
+################################
+
+create --> Create Table students(rollno int(3),name varchar(20));
+Insert --> insert into students(rollno,name) from VALUES(1,"Ram");
+Update ---> UPDATE students SET name = "shivam" WHERE roll = 1;
+Delete ---> Delete from students WHERE rollno = 1;
+Read All --> Select * from students;
+
+
+
+
+//////////////////////////////////
+How to close the connection?
+
+Ans--> 
+To close the ResultSet,
+
+refResultSet.close();
+
+To close the Statement
+
+refStatement.close();
+
+To close the connection
+
+refConnection.close();
+
+Q4. What is JDBC Driver?
+
+Ans--> JDBC driver are the software components which implement Interfaces in 
+JDBC APIs to enable java application to interact with the databases.
+
+# There are four types of JDBC driver-->
+
+1. Type -1 driver or JDBC-ODBC bridge driver
+2. Type -2 driver or Native - API driver
+3. Type -3 driver or Network Protocol driver
+4. Type -4 driver or Thin Driver
+
+## Which driver to use When?
+
+1. If you are accessing one type of database,such as Oracle,Sybase,IBM,the preferred
+driver is Type-4 (Thin Driver)
+
+2. If your Java application is accessing multiple types of databases at the same
+time type-3 (Network Protocol Driver)
+
+3. %%% Type -1 is used for development and testing purpose only
+
+4. Type 2 are useful where Type 3 and Type 4 are not available.
+
+##################################
+execute() --> it is used for all types of sql statements that return 
+boolean values true or false
+
+executeUpdate() --> it is used for DML statements(insert,update,delete)
+
+
+executeQuery() ----> it is used to retrieve data from database using Select executeQuery
+
+
+
+
+
+
+
+
+
+
+
+
+
